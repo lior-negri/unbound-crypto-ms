@@ -39,7 +39,7 @@ public class RSACryptoUtil implements CryptoUtil<KeyPair> {
     }
 
     @Override
-    public boolean verify(final KeyPair keyPair, final byte[] data, final byte[] signature) {
+    public boolean verify(final KeyPair keyPair, final byte[] data, final String signature) {
         try {
             Signature sigInstance = Signature.getInstance(SIGNATURE_METHOD);
             PublicKey publicKey = keyPair.getPublic();

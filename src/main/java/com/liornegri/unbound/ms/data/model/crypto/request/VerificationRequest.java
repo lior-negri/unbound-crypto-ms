@@ -23,8 +23,7 @@ public class VerificationRequest {
     @JsonProperty(value = "data", required = true)
     byte[] data;
 
-    @NotNull(message = "signature cannot be null")
-    @NotEmpty(message = "signature cannot be empty")
+    @NotBlank(message = "signature cannot be null or empty")
     @JsonProperty(value = "signature", required = true)
-    byte[] signature;
+    String signature;
 }

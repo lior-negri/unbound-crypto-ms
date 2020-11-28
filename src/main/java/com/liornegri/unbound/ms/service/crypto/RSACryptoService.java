@@ -50,7 +50,7 @@ public class RSACryptoService implements CryptoService {
     }
 
     @Override
-    public boolean verify(final String id, final byte[] data, final byte[] signature) {
+    public boolean verify(final String id, final byte[] data, final String signature) {
         KeyPair keyPair = getKeyPair(id);
         return rsaCryptoUtil.verify(keyPair, data, signature);
     }

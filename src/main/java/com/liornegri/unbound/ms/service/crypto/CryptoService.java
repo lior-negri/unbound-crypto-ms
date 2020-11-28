@@ -7,5 +7,5 @@ public interface CryptoService {
     void deleteKey(String id);
     List<String>  getIds();
     byte[] sign(String id, byte[] data);
-    boolean verify(String id, byte[] data, byte[] signature);
+    boolean verify(String id, byte[] data, String signature);
 }
